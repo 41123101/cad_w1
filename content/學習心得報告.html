@@ -170,9 +170,39 @@ img.add_border {
 </ol>
 <p>w10:<span> </span><a href="https://cyberbotics.com/">Webots</a><span> </span>是什麼？有什麼特點？ 如何進行場景模擬？ 如何用 Python 進行控制系統設計？ (<a href="https://cyberbotics.com/doc/guide/tutorials">Tutorial</a>)</p>
 <p></p>
+<ul>
+<li>什麼是 Webots？ 一款開源的專業移動機器人模擬器，由 Cyberbotics 開發。</li>
+<li>特點：
+<ul data-path-to-node="15,1,1">
+<li>跨平台： Windows, Linux, macOS。</li>
+<li>多語言支援： Python, C++, MATLAB。</li>
+<li>感測器豐富： 內建 LiDAR, 攝影機, IMU 等。</li>
+</ul>
+</li>
+<li>Python 控制： 使用 <code data-index-in-node="14" data-path-to-node="15,2,0">controller</code> 函式庫，透過 <code data-index-in-node="32" data-path-to-node="15,2,0">robot.getDevice()</code> 取得馬達或感測器權限，並在 <code data-index-in-node="64" data-path-to-node="15,2,0">while</code> 迴圈中進行時步（Time Step）更新。</li>
+</ul>
+<p></p>
 <p>w14:<span> </span><a href="https://cyberbotics.com/">Webots</a><span> </span>的模型有沒有辦法用程式方法建立? 有沒有辦法直接從 CAD 套件中轉出<span> </span><a href="https://cyberbotics.com/">Webots</a><span> </span>的場景模型？</p>
 <p></p>
+<ul>
+<li>透過 Webots 的 <code data-index-in-node="23" data-path-to-node="18,0,0">.proto</code> 檔案格式。你可以撰寫類參數化的腳本，根據輸入參數自動生成不同的機器人尺寸。</li>
+<li>CAD 轉出：
+<ul data-path-to-node="18,1,1">
+<li>可以使用專門的插件（如 URDF Exporter），將 Onshape 或 SolidWorks 模型轉為 URDF 格式，再由 Webots 匯入。</li>
+<li>Webots 本身也支援直接匯入某些格式的 3D 模型作為節點。</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<p></p>
 <p>w17: 如何實作一套<span> </span><a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a><span> </span>與<span> </span><a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a>？(<a href="https://la.disneyresearch.com/publication/design-and-control-of-a-bipedal-robotic-character/">Disney Bipedal Robot</a>)</p>
+<p></p>
+<ul>
+<li>5-bar Linkage Plotter：利用平行連桿機構，將兩個馬達的旋轉轉化為末端點的二維運動。</li>
+<li>Openduck mini：小型化雙足結構，重點在於重心平衡與舵機（Servo）的同步控制。</li>
+<li>實作步驟： 3D 列印零件 <span class="math-inline" data-index-in-node="14" data-math="\rightarrow">$\rightarrow$</span> 組裝舵機 <span class="math-inline" data-index-in-node="31" data-math="\rightarrow">$\rightarrow$</span> 使用 ESP32/Arduino 控制 <span class="math-inline" data-index-in-node="63" data-math="\rightarrow">$\rightarrow$</span> 透過 Webots 測試步態。</li>
+</ul>
+<p></p>
 <p></p>
 <p>w18: 課程總結</p>
 <p></p>
