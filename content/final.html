@@ -142,80 +142,8 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">41123101 << <a href='41123101.html'>Previous</a> <a href='plotter.html'>Next</a> >> plotter<br /><h1>學習心得報告</h1>
-<p style="padding-left: 60px;"></p>
-<p>w3: 用什麼套件完成<span> </span><a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a><span> </span>與<span> </span><a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a><span> </span>零組件設計繪圖？<span> </span><a href="https://solvespace.com">Solvespace</a>,<span> </span><a href="https://plm.sw.siemens.com/en-US/nx/cad-online/">Siemens NX</a>,<span> </span><a href="https://www.onshape.com/en/">Onshape</a><span> </span>或其他？各有什麼優缺點？ (<a href="https://mde.tw/cad2025/downloads/plotter.7z">plotter.7z</a>,<span> </span><a href="./../downloads/open_duck_mini.7z">open_duck_mini.7z</a>)</p>
-<p><a href="https://www.canva.com/design/DAGztf9V4Xo/Y4ynusQv9aG04r6JR6Cgew/edit?utm_content=DAGztf9V4Xo&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton">https://www.canva.com/design/DAGztf9V4Xo/Y4ynusQv9aG04r6JR6Cgew/edit?utm_content=DAGztf9V4Xo&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton</a></p>
-<p>w7 (<span>2a 採 Youtube 影片簡報</span>):<span> </span><a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a><span> </span>與<span> </span><a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a> 零組件設計繪製完成之後，如何切割零件? 為何要切割零件？ 如何利用<span> </span><a href="https://cyberbotics.com/">Webots</a><span> </span>進行後續的控制系統設計與動態模擬 (Dynamic Simulation)？(<a href="https://mde.tw/cad2025/downloads/plotter_project.7z">plotter_project.7z</a>)</p>
-<p data-path-to-node="9">為何要切割零件？如何切割？</p>
-<ul data-path-to-node="10">
-<li>
-<p data-path-to-node="10,0,0">為何切割： 主要是為了 3D 列印 或 雷射切割。單一大型複雜模型難以直接列印，切割後可增加列印成功率並減少支撐材。</p>
-</li>
-<li>
-<p data-path-to-node="10,1,0">如何切割： 在 CAD 中使用「Split」指令，或在 Slicer 軟體中依據列印床尺寸進行分割。</p>
-</li>
-</ul>
-<p data-path-to-node="11">如何導入 Webots？</p>
-<ol data-path-to-node="12" start="1">
-<li>
-<p data-path-to-node="12,0,0">將 CAD 模型導出為 <code data-index-in-node="12" data-path-to-node="12,0,0">.stl</code> 或 <code data-index-in-node="19" data-path-to-node="12,0,0">.obj</code>。</p>
-</li>
-<li>
-<p data-path-to-node="12,1,0">在 Webots 中建立 <code data-index-in-node="13" data-path-to-node="12,1,0">Robot</code> 節點，並在 <code data-index-in-node="25" data-path-to-node="12,1,0">Children</code> 下新增 <code data-index-in-node="38" data-path-to-node="12,1,0">Shape</code> 匯入模型。</p>
-</li>
-<li>
-<p data-path-to-node="12,2,0">設定物理特性（Mass, Inertia）以進行動態模擬。</p>
-</li>
-</ol>
-<p>w10:<span> </span><a href="https://cyberbotics.com/">Webots</a><span> </span>是什麼？有什麼特點？ 如何進行場景模擬？ 如何用 Python 進行控制系統設計？ (<a href="https://cyberbotics.com/doc/guide/tutorials">Tutorial</a>)</p>
-<p></p>
-<ul>
-<li>什麼是 Webots？ 一款開源的專業移動機器人模擬器，由 Cyberbotics 開發。</li>
-<li>特點：
-<ul data-path-to-node="15,1,1">
-<li>跨平台： Windows, Linux, macOS。</li>
-<li>多語言支援： Python, C++, MATLAB。</li>
-<li>感測器豐富： 內建 LiDAR, 攝影機, IMU 等。</li>
-</ul>
-</li>
-<li>Python 控制： 使用 <code data-index-in-node="14" data-path-to-node="15,2,0">controller</code> 函式庫，透過 <code data-index-in-node="32" data-path-to-node="15,2,0">robot.getDevice()</code> 取得馬達或感測器權限，並在 <code data-index-in-node="64" data-path-to-node="15,2,0">while</code> 迴圈中進行時步（Time Step）更新。</li>
-</ul>
-<p></p>
-<p>w14:<span> </span><a href="https://cyberbotics.com/">Webots</a><span> </span>的模型有沒有辦法用程式方法建立? 有沒有辦法直接從 CAD 套件中轉出<span> </span><a href="https://cyberbotics.com/">Webots</a><span> </span>的場景模型？</p>
-<p></p>
-<ul>
-<li>透過 Webots 的 <code data-index-in-node="23" data-path-to-node="18,0,0">.proto</code> 檔案格式。你可以撰寫類參數化的腳本，根據輸入參數自動生成不同的機器人尺寸。</li>
-<li>CAD 轉出：
-<ul data-path-to-node="18,1,1">
-<li>可以使用專門的插件（如 URDF Exporter），將 Onshape 或 SolidWorks 模型轉為 URDF 格式，再由 Webots 匯入。</li>
-<li>Webots 本身也支援直接匯入某些格式的 3D 模型作為節點。</li>
-</ul>
-</li>
-</ul>
-<p></p>
-<p></p>
-<p>w17: 如何實作一套<span> </span><a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a><span> </span>與<span> </span><a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a>？(<a href="https://la.disneyresearch.com/publication/design-and-control-of-a-bipedal-robotic-character/">Disney Bipedal Robot</a>)</p>
-<p></p>
-<ul>
-<li>5-bar Linkage Plotter：利用平行連桿機構，將兩個馬達的旋轉轉化為末端點的二維運動。</li>
-<li>Openduck mini：小型化雙足結構，重點在於重心平衡與舵機（Servo）的同步控制。</li>
-<li>實作步驟： 3D 列印零件 <span class="math-inline" data-index-in-node="14" data-math="\rightarrow">$\rightarrow$</span> 組裝舵機 <span class="math-inline" data-index-in-node="31" data-math="\rightarrow">$\rightarrow$</span> 使用 ESP32/Arduino 控制 <span class="math-inline" data-index-in-node="63" data-math="\rightarrow">$\rightarrow$</span> 透過 Webots 測試步態。</li>
-</ul>
-<p></p>
-<p></p>
-<p>w18: 課程總結</p>
-<p data-path-to-node="3">這學期的課程下來，我覺得收穫最多的不是寫了多少程式碼，而是學會了怎麼在重重問題中「生存」下來。</p>
-<p>1. 跟 Plotter 戰鬥的日子 一開始做 Plotter（繪圖機） 的時候真的很有挫折感。我還記得第一次做出來的模擬影片完全是失敗的，機構卡住、動作不順。但我把那些「失敗畫面」都記錄下來，透過不斷調整零件尺寸，最後終於在 Webots 裡面看到它成功跑起來的那一刻，真的很有成就感！</p>
-<p>2. 這學期最讓我頭大的就是 Git 衝突。尤其是跟組員一起改東西的時候，常常一拉（Pull）下來就是滿畫面的紅字衝突。</p>
-<ul data-path-to-node="6">
-<li>我學會了怎麼看那些像外星語的 <code data-index-in-node="15" data-path-to-node="6,0,0">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>。</li>
-<li>搞懂了「先拉 (Pull) 再推 (Push)」的黃金法則。</li>
-<li>雖然中間幾次差點想直接 <code data-index-in-node="12" data-path-to-node="6,2,0">--force</code> 暴力解決，但最後能靠自己手動解開那些「修改/刪除衝突」，讓終端機顯示 <code data-index-in-node="55" data-path-to-node="6,2,0">working tree clean很爽</code>。</li>
-</ul>
-<p>3. 從實作中看見成果 把自己的開發過程轉成靜態網頁（Convert）很有趣。雖然過程中會因為自動產生的 js 檔案一直衝突，但也讓我理解到大型網站背後的索引是怎麼運作的。看到自己的照片、影片和心得最後成功部署到 GitHub Pages 上，讓別人也能看到我的成果，這就是對這學期最好的總結。</p>
-<p><b>4.</b>這門課教會我最重要的一件事：<b data-index-in-node="24" data-path-to-node="8">「</b>遇到報錯不要慌，看懂 hint 是解決問題的開始<b data-index-in-node="24" data-path-to-node="8">。」</b> 從一開始看到報錯會手抖，到現在可以冷靜地 <code data-index-in-node="73" data-path-to-node="8">git status</code> 檢查狀態，我覺得自己在邏輯思考和耐性上都進步了很多。</p>
-<br />41123101 << <a href='41123101.html'>Previous</a> <a href='plotter.html'>Next</a> >> plotter</div>
+    <div id="tipue_search_content">plotter << <a href='plotter.html'>Previous</a> <br /><h1>final</h1>
+<p><img alt="" height="494" src="./../images/螢幕擷取畫面 2026-01-06 110440.png" width="800"/></p><br />plotter << <a href='plotter.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
